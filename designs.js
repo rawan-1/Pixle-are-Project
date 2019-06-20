@@ -9,6 +9,7 @@ function makeGrid(event) {
   const hight = document.getElementById("inputHeight").value;
   const width = document.getElementById("inputWidth").value;
 
+  // drawing the canvas
   for (var i = 0; i < hight; i++) {
     let row = document.createElement("tr");
     for (var c = 0; c < width; c++) {
@@ -16,5 +17,20 @@ function makeGrid(event) {
       row.appendChild(column);
     }
     table.appendChild(row);
+  }
+}
+
+// The reset function
+function resetGrid(event) {
+  event.preventDefault();
+  table.innerHTML = "";
+}
+
+// Coloring function
+function coloring(event) {
+  // To coloring the cell itself not all table
+  if (event.target.nodeName == "TD") {
+    var color = document.getElementById("colorPicker").value;
+    event.target.style.backgroundColor = color;
   }
 }
