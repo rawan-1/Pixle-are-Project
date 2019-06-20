@@ -11,6 +11,13 @@ h1 {
 h2 {
   margin: 1em 0 0.25em;
   font-family: "Fredericka the Great", cursive;
+  color: rgb(148, 148, 148);
+}
+
+#sizePicker,
+#inputHeight,
+#inputWidth {
+  color: rgb(148, 148, 148);
 }
 
 h2:first-of-type {
